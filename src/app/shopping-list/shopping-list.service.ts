@@ -1,4 +1,5 @@
 import { EventEmitter } from "@angular/core"
+import { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } from "constants";
 import { Ingredient } from "../shared/ingredients.model"
 
 export class ShoppingListService { 
@@ -17,4 +18,9 @@ export class ShoppingListService {
         this.ingredients.push(ingredient)
         this.ingredientsChanged.emit(this.ingredients.slice())
       }
+
+      addIngredients(ingredients: Ingredient[]) {
+        this.ingredients.push(...ingredients)
+        this.ingredientsChanged.emit(this.ingredients.slice())
+    }
 }
