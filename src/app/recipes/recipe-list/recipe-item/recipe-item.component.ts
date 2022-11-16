@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 import { Recipe } from "../../recipe.model"
 import { Input } from '@angular/core';
@@ -10,6 +10,7 @@ import { Input } from '@angular/core';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe
+  @Input() index: number
 
   constructor() { }
 
