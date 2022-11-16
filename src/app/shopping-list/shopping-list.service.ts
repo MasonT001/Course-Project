@@ -1,5 +1,4 @@
 import { EventEmitter } from "@angular/core"
-import { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } from "constants";
 import { Ingredient } from "../shared/ingredients.model"
 
 export class ShoppingListService { 
